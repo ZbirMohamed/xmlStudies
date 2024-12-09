@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="teams">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="team" type="typeTeam" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:complexType name="typeTeam">
+        <xs:sequence>
+            <xs:element name="nom" type="typeNom"/>
+            <xs:element name="nombre" type="xs:int"/>
+            <xs:element name="code">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="[A-Z]-\d{3}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="competences" type="typeCompet" />
+        </xs:sequence>
+        <xs:attribute name="num" type="xs:int" />
+        <xs:attribute name="type" type="xs:string" />
+    </xs:complexType>
+
+    <xs:complexType name="typeCompet">
+        <xs:sequence>
+            <xs:element name="S1" type="xs:string"/>
+            <xs:element name="S2" type="xs:string"/>
+            <xs:element name="S3" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:simpleType name="typeNom">
+        <xs:restriction base="xs:string">
+            <xs:pattern value=".{1,10}" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+</xs:schema>

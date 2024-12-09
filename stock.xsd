@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <!-- main schema -->
+    <xs:element name="stock">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Categorie" type="typeCate" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- end main schema -->
+
+    <!-- complex Elements types -->
+    <!-- categorie -->
+    <xs:complexType name="typeCate">
+        <xs:sequence>
+            <xs:element name="libelle" type="xs:string" />
+            <xs:element name="produit" type="typeProd" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:attribute name="idCat" type="typeCateId" use="required"/>
+    </xs:complexType>
+
+    <!-- Produit -->
+    <xs:complexType name="typeProd">
+        <xs:sequence>
+            <xs:element name="marque" type="xs:string"/>
+            <xs:element name="modele" type="xs:string"/>
+            <xs:element name="fournisseur" type="typeFour"/>
+        </xs:sequence>
+        <xs:attribute name="idProd" type="typeId" use="required"/>
+    </xs:complexType>
+
+    <!-- fournisseur -->
+    <xs:complexType name="typeFour">
+        <xs:sequence>
+            <xs:element name="raisonSocial" type="xs:string" />
+            <xs:element name="address" type="typeAddress" />
+            <xs:element name="telephone" type="xs:string" />
+        </xs:sequence>
+        <xs:attribute name="idfour" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <!-- -->
+    <!--patterns typing -->
+
+    <xs:simpleType name="typeId">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z]\d{3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="typeCateId">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="C\d{5}" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="typeAddress">
+        <xs:restriction base="xs:string">
+            <xs:pattern value=".{1,40}" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- -->
+</xs:schema>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<shipOrder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:noNamespaceSchemaLocation="orders.xsd"
+    orderid="123456"
+>
+    <orderPerson>P</orderPerson>
+    <shipto>
+        <name>a</name>
+        <address>b</address>
+        <city>v</city>
+        <country>d</country>
+    </shipto>
+    <item>
+        <title>a</title>
+        <quantity>1</quantity>
+        <price>12.2</price>
+    </item>
+</shipOrder>

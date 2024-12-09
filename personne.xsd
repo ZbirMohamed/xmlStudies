@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="personne">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nom" type="xs:string"></xs:element>
+                <xs:element name="prenom" type="xs:string"/>
+                <xs:element name="date_naissance" type="xs:date"/>
+                <xs:element name="ville" type="xs:string"/>
+                <xs:element name="sexe">
+                    <xs:simpleType>
+                        <xs:restriction>
+                            <xs:enumeration value="homme" />
+                            <xs:enumeration value="femme" />
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="enfants" type="enfantType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="enfantType">
+        <xs:sequence>
+            <xs:element name="nom_complet" type="xs:string" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

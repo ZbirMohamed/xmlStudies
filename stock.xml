@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<stock xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="stock.xsd">
+    <Categorie idCat="C12345">
+        <libelle>BONJOUR</libelle>
+        <produit idProd="P123">
+
+            <marque> Adidas </marque>
+            <modele> Samba </modele>
+
+            <fournisseur idfour="1">
+                <raisonSocial>1234567</raisonSocial>
+                <address>11 rue agadir</address>
+                <telephone>0611474425</telephone>
+            </fournisseur>
+        </produit>
+    </Categorie>
+</stock>

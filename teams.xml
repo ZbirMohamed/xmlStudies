@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<teams>
+    <team num="1" type="web">
+        <nom>DevOps</nom>
+        <nombre>5</nombre>
+        <code>F-137</code>
+        <competences>
+            <S1>Javascripte</S1>
+            <S2>PhP</S2>
+            <S3>MySql</S3>
+        </competences>
+    </team>
+    <team num="2" type="android">
+        <nom>Dev</nom>
+        <nombre>3</nombre>
+        <code>D-135</code>
+        <competences>
+            <S1>Java</S1>
+            <S2>SqlLite</S2>
+        </competences>
+    </team>
+</teams>

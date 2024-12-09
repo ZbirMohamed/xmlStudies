@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<patterns xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="pattern.xsd">
+    <cinqChiffre>55555</cinqChiffre>
+    <auMaxTrois>012</auMaxTrois>
+    <deuxMajTroisMin>AB123</deuxMajTroisMin>
+    <deuxMajOuMinDeuxNbrUnMaj>Az12A</deuxMajOuMinDeuxNbrUnMaj>
+</patterns>
