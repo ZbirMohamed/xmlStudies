@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="menus">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="menu" type="typeMenu"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="typeMenu">
+        <xs:sequence>
+            <xs:element name="entree" maxOccurs="unbounded" type="typeElement" />
+            <xs:element name="plat" maxOccurs="unbounded" type="typeElement" />
+            <xs:element name="fromage" minOccurs="0" type="typeElement" />
+            <xs:element name="dessert" maxOccurs="unbounded" type="typeElement"/>
+            <xs:element name="prix" type="typePrix"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="typeElement">
+        <xs:sequence>
+            <xs:element name="code">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="\d{1,3}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="nom" type="xs:string"/>
+            <xs:element name="description" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="typePrix">
+        <xs:sequence>
+            <xs:element name="valeur" type="xs:float"/>
+            <xs:element name="monnaie">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="USD"/>
+                        <xs:enumeration value="EUR"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

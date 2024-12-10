@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<menus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="menu.xsd">
+    <menu>
+        <entree>
+            <code>123</code>
+            <nom>Salade Cesar</nom>
+            <description>Bonjour le monde</description>
+        </entree>
+        <entree>
+            <code>123</code>
+            <nom>Salade Cesar</nom>
+            <description>Bonjour le monde</description>
+        </entree>
+        <plat>
+            <code>124</code>
+            <nom>Friture Poissons</nom>
+            <description>Bonjour le world</description>
+        </plat>
+        <dessert>
+            <code>13</code>
+            <nom>Tiramisu</nom>
+            <description>Bonjour the world</description>
+        </dessert>
+        <prix>
+            <valeur>18.0</valeur>
+            <monnaie>USD</monnaie>
+        </prix>
+    </menu>
+</menus>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE menus[
+        <!ELEMENT menu (entree+,plat+,fromage?,dessert+,prix) >
+        <!ELEMENT entree (typeCode) >
+        <!ELEMENT plat (typeCode) >
+        <!ELEMENT fromage (typeCode) >
+        <!ELEMENT dessert (typeCode) >
+        <!ELEMENT prix (valeur)>
+        <!ELEMENT typeCode (code,nom,description)>
+        <!ELEMENT code (#PCDATA) >
+        <!ELEMENT nom (#PCDATA) >
+        <!ELEMENT description (#PCDATA) >
+        <!ELEMENT valeur (#PCDATA) >
+        <!-- Puisqu'il est impossible de cree une enumearation avec des elements j'ai choisi un attribut -->
+        <!ATTLIST valeur monnaie ("USD"|"EURO") "USD" >
+        ]>
