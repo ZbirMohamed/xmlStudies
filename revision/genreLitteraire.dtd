@@ -1,0 +1,14 @@
+<!DOCTYPE genres[
+    <!ELEMENT genreLitteraire (roman+, poeme+, fable+, biographie+, conte+, theatre+)>
+    <!ELEMENT roman (description, oeuvre+)>
+    <!ELEMENT poeme (description, oeuvre+)>
+    <!ELEMENT fable (description, oeuvre+)>
+    <!ELEMENT biographie (description, oeuvre+)>
+    <!ELEMENT conte (description, oeuvre*)>
+    <!ELEMENT theatre (description, oeuvre+)>
+    <!ELEMENT description (#PCDATA)>
+    <!ELEMENT oeuvre ((auteur | peintre), titre*)>
+    <!ELEMENT auteur (#PCDATA)>
+    <!ELEMENT peintre (#PCDATA)>
+    <!ELEMENT titre (#PCDATA)>
+    ]>

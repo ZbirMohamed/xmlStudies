@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<genresLitteraire>
+    <roman>
+        <description> c'est une description </description>
+        <oeuvre>
+            <auteur> John jack rousseaux </auteur>
+            <!-- le titre est optionnel -->
+            <titre> Moby D </titre>
+        </oeuvre>
+    </roman>
+    <poeme>
+        <description> c'est une description </description>
+        <oeuvre>
+            <auteur> John jack rousseaux </auteur>
+            <!-- le titre est optionnel -->
+            <titre> Moby D </titre>
+        </oeuvre>
+    </poeme>
+    <fable>
+        <description> c'est une description </description>
+        <oeuvre>
+            <auteur> John jack rousseaux </auteur>
+        </oeuvre>
+    </fable>
+    <biographie>
+        <description> c'est une description </description>
+        <oeuvre>
+            <peintre> John jack rousseaux </peintre>
+        </oeuvre>
+    </biographie>
+    <conte>
+        <description> c'est une description </description>
+    </conte>
+    <theatre>
+        <description> c'est une description </description>
+        <oeuvre>
+            <auteur> John jack rousseaux </auteur>
+        </oeuvre>
+    </theatre>
+
+</genresLitteraire>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="genresLitteraire">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="roman" type="typeComp" maxOccurs="unbounded"/>
+                <xs:element name="poeme" type="typeComp" maxOccurs="unbounded"/>
+                <xs:element name="fable" type="typeComp" maxOccurs="unbounded"/>
+                <xs:element name="biographie" type="typeComp" maxOccurs="unbounded"/>
+                <xs:element name="conte" type="typeConte" maxOccurs="unbounded"/>
+                <xs:element name="theatre" type="typeComp" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="typeComp">
+        <xs:sequence>
+            <xs:element name="description" type="xs:string"/>
+            <xs:element name="oeuvre" type="typeOeuvre" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="typeOeuvre">
+        <xs:sequence>
+            <xs:choice>
+                <xs:element name="auteur" type="xs:string" />
+                <xs:element name="peintre" type="xs:string" />
+            </xs:choice>
+            <xs:element name="titre" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="typeConte">
+        <xs:sequence>
+            <xs:element name="description" type="xs:string"/>
+            <xs:element name="oeuvre" type="typeOeuvre" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
